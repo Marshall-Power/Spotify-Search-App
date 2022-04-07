@@ -1,0 +1,71 @@
+.artistCard {
+    @include flexSetUp(center, normal, column);
+    background-color: #efefef;
+    border-radius: 30px;
+    margin: 15px;
+    padding-bottom: 15px;
+    animation: slideIn 1000ms ease-in forwards;
+    left: -1500px;
+    position: relative;
+    @for $i from 4 through 1 {
+        &:nth-child( #{$i} ) {
+          -webkit-animation: slideIn .75s #{$i * 0.25}s ease 1 forwards;
+          -moz-animation: slideIn .75s #{$i * 0.25}s ease 1 forwards;
+         animation: slideIn .75s #{$i * 0.25}s ease 1 forwards; 
+        }
+      }
+    
+    
+    @-webkit-keyframes slideIn {
+      0% {
+        left: -500px;
+      }
+      100% {
+        left: 0;
+      }
+    }
+    .artistCard__img {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid rgb(160, 160, 160);
+        margin: 35px;
+        @media (max-width: $medium) {
+            margin: 15px;
+        }
+    }
+    .artistCard__name {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 40px 15px;
+        text-align: left;
+        color: black;
+        @media (max-width: $medium) {
+            padding: 15px;
+            text-align: center;
+        }
+    }
+    .artistCard__tag {
+        padding-left: 40px;
+        @media (max-width: $medium) {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+   
+@-webkit-keyframes slideIn {
+   to {
+        left: 0;
+    }
+    }
+    @-moz-keyframes slideIn {
+    to {
+        left: 0;
+    }
+    }
+    @keyframes slideIn {
+    to {
+        left: 0;
+    }
+}

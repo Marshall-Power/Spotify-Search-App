@@ -1,0 +1,110 @@
+html, body {
+  font-family: $system-font;
+  font-size: 100%;
+}
+
+body {
+  background-color: #fff;
+  color:#505050;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { max-width: 100%; }
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+* + * {
+  margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin-bottom: -0.1em;
+}
+p {
+  font-size: 0.875em;
+  color: #777;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+a {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+}
+.center {
+  @include flexSetUp(center, center, row)
+}
+.center--col {
+  @include flexSetUp(center, center, column)
+}
+._pageTitle {
+  font-size: 40px;
+  padding: 15px 0;
+}
+
+._pageSubTitle {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+._container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+._section {
+  padding: 30px 15px;
+}
+
+._section--grey {
+  background-color: $bgcolor;
+}
+
+._flex {
+  display: flex;
+}
+._grid {
+  display: grid;
+}
+._grid--fourCol {
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: $medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.loginContainer {
+  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  animation-name: fadeIn;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity:0}
+  to {opacity: 100%}
+}

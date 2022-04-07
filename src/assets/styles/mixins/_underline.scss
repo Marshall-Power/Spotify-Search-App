@@ -1,0 +1,34 @@
+
+
+/* height & distance with px */
+@mixin underline($type, $color, $height, $distance) {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    &:before {
+      content: '';
+      width: 0;
+      height: $height;
+      position: absolute;
+      bottom: $distance;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      background-color: $color;
+      @if $type == 'center'{
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+      }
+      @else if $type == 'left' {
+        left: 0;
+      }
+      @else if $type == 'right' {
+        right: 0;
+      }
+    }
+    &:hover {
+      &:before {
+        width: 100%;   
+      }
+    }
+  }

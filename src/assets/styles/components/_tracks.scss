@@ -1,0 +1,41 @@
+.track {
+    @include flexSetUp(left, center, row);
+    padding: 4px;
+    opacity: 0;
+    animation: fade-in 400ms ease-in forwards;
+
+    @for $x from 1 through 5 {
+        &:nth-child(#{$x}) {
+          animation-delay: 300ms * ($x - 1) / $x * 5;
+        }
+      }
+      
+    &:hover {
+        background-color: $bgcolor;
+    }
+    .track__img {
+        padding: 10px;
+    }
+    .track__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .track__title {
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            color: black;
+        }
+    }
+    .track__duration {
+        padding-right: 10px;
+    }
+}
+
+
+
+@keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }

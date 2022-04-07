@@ -1,0 +1,13 @@
+.nav {
+    @include flexSetUp(center, center, row);
+    &__menu {
+        @include flexSetUp(center, center, row);
+        &-item {
+            padding-right: 15px;
+        }
+    }
+}
+
+.active {
+    text-decoration: underline;
+}

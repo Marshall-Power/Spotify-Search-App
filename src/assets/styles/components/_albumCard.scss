@@ -1,0 +1,26 @@
+.albumCard {
+    @include flexSetUp(center, normal, column);
+    background-color: #efefef;
+    border-radius: 30px;
+    margin: 15px;
+    padding-bottom: 15px;
+    .albumCard__img {
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        margin: 40px;
+        border: 1px solid rgb(160, 160, 160);
+        @media (max-width: $medium) {
+            margin: 15px;
+        }
+    }
+    .albumCard__name {
+        font-size: 18px;
+        padding: 0 40px 15px;
+        text-align: left;
+        text-align: center;
+        @media (max-width: $medium) {
+            padding: 15px;
+            text-align: center;
+        }
+    }
+}

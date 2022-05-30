@@ -13,7 +13,7 @@ const AboutData = ({token}) => {
         .then((result) => {
           setData(result)
         })
-  })  
+  },[token])  
   
     if(data){
       return (

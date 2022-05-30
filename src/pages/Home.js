@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import Login from './Login'
 import ArtistCard from "../components/ArtistCard"
 import AlbumCard from "../components/AlbumCard"
+import StartTyping from "../components/startTyping"
 import useFetch from "../hooks/useFetch"
 import Nav from "../components/Nav"
 import Cookies from 'js-cookie'
@@ -23,6 +24,8 @@ const Home = () => {
             onChange={(e) => setData({ ...data, slug: e.target.value })}
           />
       
+          <StartTyping data={data} />
+
           <Tracks tracks={data.results.tracks}/> 
           <ArtistCard artists={data.results.artists}/>
           <AlbumCard albums={data.results.albums}/>

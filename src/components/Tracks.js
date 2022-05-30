@@ -23,10 +23,10 @@ const Track = ({track, album, trackCover, durationMs, href}) => {
 }
 
 //Track parent component that renders a list of tracks
-const Tracks = ({tracks}) => {
-    let trackObj = {tracks} 
-    if(trackObj.tracks !== undefined){
-        const listItems = trackObj.tracks.items.map((track) => {
+const Tracks = (trackList) => {
+    
+    if(trackList.tracks !== undefined){
+        const listItems = trackList.tracks.items.map((track) => {
             return (
                 <Track
                     key={track.id}
@@ -46,7 +46,7 @@ const Tracks = ({tracks}) => {
             </div>
         )
     }
-    return (<div className='center'>Start typing to search in the spotify catalog</div>)
+    //return (<div className='center'>Start typing to search in the spotify catalog</div>)
     
 }
 

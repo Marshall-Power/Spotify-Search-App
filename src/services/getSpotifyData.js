@@ -18,4 +18,4 @@ const searchItems = async (q, token) => {
     }  
 }
 
-export default { searchItems }
+export default searchItems

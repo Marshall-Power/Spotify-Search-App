@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Cookies from 'js-cookie'
-import artistsService from '../services/getSpotifyData'
+import searchItems from '../services/getSpotifyData'
+
+const isDeepEqual = require('fast-deep-equal/es6');
 
 const useFetch = () => {
   const [data, setData] = useState({
@@ -9,22 +11,25 @@ const useFetch = () => {
     token: Cookies.get("spotifyAuthToken")
   });
   
+  const prevData = useRef(data)
+  
   useEffect(() => {
-    if (data.slug !== "") {
+    if (!isDeepEqual(prevData.current, data)) {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
               try {
-                const res = await artistsService.searchItems(data.slug, data.token)
+                const res = await searchItems(data.slug, data.token)
                 setData({ ...data, results: res });
               } catch (err) {
                 console.error(err);
               }
             };
             fetch();
+            prevData.current = data;
           }, 1000);
           return () => clearTimeout(timeoutId);
         }
-  }, [data.slug]);
+  }, [data]);
   
 
   return { data, setData };

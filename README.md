@@ -12,7 +12,7 @@ I started the project locally and didn't use git for most of it, otherwise I wou
 
 The app is complete (there's always some refractoring to do, improvements to make, bugs to catch) but should work as expected.
 
-I also deployed a version on netifly you can see it here: https://spotify-search-mplanas.netlify.app/
+
 
 # Getting Started with Create React App
 

@@ -2,7 +2,6 @@ import Track from "./Track"
 
 //Track parent component that renders a list of tracks
 const Tracks = (trackList) => {
-    
     if(trackList.tracks !== undefined){
         const listItems = trackList.tracks.items.map((track) => {
             return (
@@ -12,7 +11,7 @@ const Tracks = (trackList) => {
                     album={track.album}
                     durationMs={track.duration_ms}
                     trackCover={track.album.images[2].url}
-                    href={track.uri}
+                    href={track.external_urls['spotify']}
                 />
             )
         })
@@ -23,9 +22,7 @@ const Tracks = (trackList) => {
                 {listItems}
             </div>
         )
-    }
-    //return (<div className='center'>Start typing to search in the spotify catalog</div>)
-    
+    }    
 }
 
 export default Tracks

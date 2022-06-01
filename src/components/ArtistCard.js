@@ -12,7 +12,7 @@ const Artists = (artistsList) => {
                     key={artist.id}
                     artist={artist.name}
                     artistCover={artist.images[1] ? artist.images[1].url : personPlaceholder}
-                    href={artist.uri}
+                    href={artist.external_urls['spotify']}
                 />
             )
         })

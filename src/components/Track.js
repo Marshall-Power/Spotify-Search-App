@@ -13,7 +13,7 @@ const Track = ({track, album, trackCover, durationMs, href}) => {
         <div className='track'>
             <img className='track__img' src={trackCover} alt={track} loading='lazy'/>
             <div className='track__info'>
-                <a href={href} className='track__title'>{track}</a>
+                <a href={href} className='track__title' target="_blank" rel="noreferrer noopener">{track}</a>
                 <span className='track__artist'>{album.name}</span>
             </div>
             <div className='track__duration'>{duration}</div>

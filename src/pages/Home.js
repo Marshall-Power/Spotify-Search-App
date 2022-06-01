@@ -14,6 +14,8 @@ const Home = () => {
     let token = Cookies.get("spotifyAuthToken")
     
     if(token){
+      
+      console.log(data.results.tracks)
       return (
       <div className='page'>
         <div className='main'>

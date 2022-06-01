@@ -1,5 +1,5 @@
 //Album individual component, gets the album release date, name and image as props
-export const Album = ({album, albumCover, albumDate}) => {
+const Album = ({album, albumCover, albumDate}) => {
     let albumYear = albumDate.slice(0, 4)
 
     return(

@@ -1,4 +1,4 @@
-export const Artist = ({artist, artistCover, href}) => {
+const Artist = ({artist, artistCover, href}) => {
     
     return(
          <div className='artistCard'>

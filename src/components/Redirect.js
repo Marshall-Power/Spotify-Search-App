@@ -25,7 +25,7 @@ const Redirect = ({target}) => {
           Cookies.set("spotifyAuthToken", token.access_token)
           return navigate(target);
       }
-    },[token]);
+    },[token, navigate, target]);
   }
 
 export default Redirect

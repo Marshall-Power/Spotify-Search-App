@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Cookies from 'js-cookie'
-import searchItems from '../services/getSpotifyData'
+import getData from "../services/getData";
 
 const isDeepEqual = require('fast-deep-equal/es6');
 
@@ -18,7 +18,7 @@ const useFetch = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
               try {
-                const res = await searchItems(data.slug, data.token)
+                const res = await getData(data.slug, data.token)
                 setData({ ...data, results: res });
               } catch (err) {
                 console.error(err);

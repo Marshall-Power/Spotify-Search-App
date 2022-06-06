@@ -1,18 +1,16 @@
 import {useState, useEffect} from 'react'
-import userService from '../services/getUserData'
+import fetchData from '../services/getData'
 import personPlaceholder from '././../assets/img/placeholder-image-person-jpg.jpg'
 
 const AboutData = ({token}) => {
     
-    const [data, setData] = useState('')
+  const [data, setData] = useState('')
 
-  
   useEffect(() => {
-    userService
-        .getUser(token)
-        .then((result) => {
-          setData(result)
-        })
+    fetchData(undefined, token)
+      .then(res => {
+        setData(res);
+      })
   },[token])  
   
     if(data){

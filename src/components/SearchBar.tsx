@@ -1,7 +1,13 @@
 import React from 'react'
 import '../assets/styles/components/_searchBar.scss'
 
-const SearchBar = ({ value, onChange, placeholder }) => {
+interface SearchProps {
+    value: string,
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    placeholder: string
+}
+
+const SearchBar = ({ value, onChange, placeholder }: SearchProps): JSX.Element => {
     return (
         <div>
           <input

@@ -1,6 +1,7 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Nav = ({links}) => {
+const Nav = (): JSX.Element => {
     return (
         <nav className='nav'>
             <ul className='nav__menu'>

@@ -1,4 +1,12 @@
-const Artist = ({artist, artistCover, href}) => {
+import React from 'react'
+
+interface ArtistProps {
+    artist: string
+    artistCover: string
+    href: string
+}
+
+const Artist = ({artist, artistCover, href}: ArtistProps): JSX.Element => {
     
     return(
          <div className='artistCard'>

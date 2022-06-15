@@ -1,9 +1,12 @@
+import React from 'react'
 import personPlaceholder from '../assets/img/placeholder-image-person-jpg.jpg'
 //Artist individual component, gets the artist name and artist image as props
 import Artist from './Artist'
 
+type ArtistsProps = SpotifyApi.ArtistSearchResponse
+
 //Artist parent component, renders the list of artists, gets the full artists object from spotify and renders if it's not undefined
-const Artists = (artistsList) => {
+const Artists = (artistsList: ArtistsProps): JSX.Element | null => {
     
     if(artistsList.artists !== undefined){
         const listItems = artistsList.artists.items.map((artist) => {

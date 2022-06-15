@@ -2,7 +2,7 @@ import React from 'react'
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
-const Login = () => {
+const Login = (): JSX.Element => {
   //If the token to request spotify's data isn't set the login page will appear, otherwise the search page will be shown
   return (
     <div id='app'>

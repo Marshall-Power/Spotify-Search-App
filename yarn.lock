@@ -2070,6 +2070,11 @@
     "jest-matcher-utils" "^27.0.0"
     "pretty-format" "^27.0.0"
 
+"@types/js-cookie@^3.0.2":
+  "integrity" "sha512-6+0ekgfusHftJNYpihfkMu8BWdeHs9EOJuGcSofErjstGPfPGEu9yTu4t460lTzzAMl2cM5zngQJqPMHbbnvYA=="
+  "resolved" "https://registry.npmjs.org/@types/js-cookie/-/js-cookie-3.0.2.tgz"
+  "version" "3.0.2"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   "integrity" "sha512-BLO9bBq59vW3fxCpD4o0N4U+DXsvwvIcl+jofw0frQo/GrBFC+/jRZj1E7kgp6dvTyNmA4y6JCV5Id/r3mNP5A=="
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.10.tgz"
@@ -2174,6 +2179,11 @@
   "version" "0.3.33"
   dependencies:
     "@types/node" "*"
+
+"@types/spotify-api@^0.0.16":
+  "integrity" "sha512-5tzZ8cJe2Wv5zjhBLXi7gJObp/kzuG10FwMKPqNtmG9HFWlXKvqBhd0Z+T5Oa0yhkSX1u8Y+bBUhUEPmZpGpDQ=="
+  "resolved" "https://registry.npmjs.org/@types/spotify-api/-/spotify-api-0.0.16.tgz"
+  "version" "0.0.16"
 
 "@types/stack-utils@^2.0.0":
   "integrity" "sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw=="

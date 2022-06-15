@@ -1,0 +1,5 @@
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.svg'
+declare module 'react-spotify-auth'
+declare module 'spotify-api'

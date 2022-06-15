@@ -4,7 +4,9 @@ import githubIcon from '../assets/img/github-ico.png'
 import overflowIcon from '../assets/img/overflow-ico.svg'
 
 const Footer = (): JSX.Element => {
+    
     let currentDate = new Date()
+    
     return(
         <footer className="main-footer">
         <div className="main-container">

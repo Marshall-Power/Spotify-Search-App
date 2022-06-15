@@ -5,12 +5,12 @@ import personPlaceholder from '././../assets/img/placeholder-image-person-jpg.jp
 
 type UserData = SpotifyApi.CurrentUsersProfileResponse;
 
-const AboutData = ({ token }: { token: string}): JSX.Element | null => {
+const AboutData = ({ token }: { token: string }): JSX.Element | null => {
     
   const [data, setData] = useState<UserData | undefined>(undefined)
 
   useEffect(() => {
-    fetchData(undefined, token)
+    fetchData(token, undefined)
       .then((res: UserData): void => {
         setData(res);
       })

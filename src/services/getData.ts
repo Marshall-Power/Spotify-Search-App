@@ -3,7 +3,7 @@ const baseUrl = 'https://api.spotify.com/v1/search',
       userUrl = 'https://api.spotify.com/v1/me'
 
 //Function that fetches the spotify data based on inputted query, with a limit of 4 items
-const fetchData = async (q: string | undefined, token: string) => {
+const fetchData = async (token?: string, q?: string) => {
     let queryUrl;
 
     if (q !== undefined) {

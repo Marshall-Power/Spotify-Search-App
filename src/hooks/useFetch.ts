@@ -4,8 +4,14 @@ import getData from "../services/getData";
 
 const isDeepEqual = require('fast-deep-equal/es6');
 
+interface SearchData {
+  results?: Array<any>;
+  token?: string;
+  slug?: string;
+}
+
 const useFetch = () => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<SearchData>({
     slug: "",
     results: [],
     token: Cookies.get("spotifyAuthToken")
@@ -18,7 +24,7 @@ const useFetch = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
               try {
-                const res = await getData(data.slug, data.token)
+                const res = await getData(data.token, data.slug)
                 setData({ ...data, results: res });
               } catch (err) {
                 console.error(err);

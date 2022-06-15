@@ -1,11 +1,13 @@
+import React from 'react'
 import albumPlaceholder from '../assets/img/album-placeholder.png'
 //Album individual component, gets the album release date, name and image as props
 import Album from './Album'
 
+type AlbumsProps = SpotifyApi.AlbumSearchResponse
+
 //Album parent component, renders the list of albums, gets the full albums object from spotify and renders if it's not undefined
- const Albums = (albumsList) => {
-     //let albumObj = {albums} 
-     
+ const Albums = (albumsList: AlbumsProps): JSX.Element | null => {
+
      if(albumsList.albums !== undefined){
          const listItems = albumsList.albums.items.map((album) => {
              return (

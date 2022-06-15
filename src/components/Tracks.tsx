@@ -1,7 +1,10 @@
+import React from 'react'
 import Track from "./Track"
 
+type TracksProps = SpotifyApi.TrackSearchResponse
+
 //Track parent component that renders a list of tracks
-const Tracks = (trackList) => {
+const Tracks = (trackList: TracksProps): JSX.Element | null => {
     if(trackList.tracks !== undefined){
         const listItems = trackList.tracks.items.map((track) => {
             return (
@@ -22,7 +25,8 @@ const Tracks = (trackList) => {
                 {listItems}
             </div>
         )
-    }    
+    }
+    return null    
 }
 
 export default Tracks

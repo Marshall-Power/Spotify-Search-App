@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import SearchBar from "../components/SearchBar"
 import Tracks from "../components/Tracks"
 import Footer from "../components/Footer"

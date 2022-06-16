@@ -6,8 +6,7 @@ interface ArtistProps {
     href: string
 }
 
-const Artist = ({artist, artistCover, href}: ArtistProps): JSX.Element => {
-    
+const Artist = ({artist, artistCover, href}: ArtistProps): JSX.Element => {  
     return(
          <div className='artistCard'>
              <img className='artistCard__img' src={artistCover} alt={artist} loading='lazy'/>

@@ -16,8 +16,8 @@ const Track = ({track, album, trackCover, durationMs, href}: trackProps): JSX.El
     //Function to convert the songs duration from ms to min:sec
     function millisToMinutesAndSeconds(millis: number): string {
         
-        let minutes = Math.floor(millis / 60000);
-        let seconds = Math.round(((millis % 60000) / 1000));
+        let minutes: number = Math.floor(millis / 60000);
+        let seconds: number = Math.round(((millis % 60000) / 1000));
         
         return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }

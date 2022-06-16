@@ -16,23 +16,22 @@ const Home = () => {
     
     if(token){
       return (
-      <div className='page'>
-        <div className='main'>
-          <h1 className='center _pageTitle'>Spotify Search</h1>
-          <Nav/>
-          <SearchBar
-            placeholder="Artists, albums, or tracks"
-            onChange={(e) => setData({ ...data, slug: e.target.value })}
-          />
-      
-          <StartTyping data={data} />
+        <div className='page'>
+          <div className='main'>
+            <h1 className='center _pageTitle'>Spotify Search</h1>
+            <Nav/>
+            <SearchBar
+              placeholder="Artists, albums, or tracks"
+              onChange={(e) => setData({ ...data, slug: e.target.value })}
+            />
+            <StartTyping data={data} />
 
-          <Tracks tracks={data.results.tracks}/> 
-          <ArtistCard artists={data.results.artists}/>
-          <AlbumCard albums={data.results.albums}/>
+            <Tracks tracks={data.results.tracks}/> 
+            <ArtistCard artists={data.results.artists}/>
+            <AlbumCard albums={data.results.albums}/>
+          </div>
+          <Footer/>
         </div>
-        <Footer/>
-      </div>
   )} else {
     return <Login/>
   }

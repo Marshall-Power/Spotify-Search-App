@@ -5,7 +5,7 @@ import overflowIcon from '../assets/img/overflow-ico.svg'
 
 const Footer = (): JSX.Element => {
     
-    let currentDate = new Date()
+    let currentDate: Date = new Date()
     
     return(
         <footer className="main-footer">

@@ -2,7 +2,7 @@ import React from 'react'
 import '../assets/styles/components/_searchBar.scss'
 
 interface SearchProps {
-    value: string,
+    value?: string,
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
     placeholder: string
 }

@@ -15,14 +15,11 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login/>}></Route>
-          <Route path="/home" element={<Home/>}></Route>
-          <Route path="/about" element={<About/>}></Route>
-          <Route
-            path="/callback"
-            element={<Redirect target='/home'/>}
-          />
-          </Routes>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/callback" element={<Redirect target='/home'/>}/>
+        </Routes>
       </BrowserRouter>
     </>
   )

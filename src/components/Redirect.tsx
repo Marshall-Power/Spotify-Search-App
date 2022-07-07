@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie'
@@ -14,7 +15,11 @@ const defParams: TokenData = {
   token_type:''
 }
 
-const Redirect = (target: string) => {
+interface targetPage {
+  target: string
+}
+
+const Redirect = ({ target }: targetPage): JSX.Element => {
     
     let navigate = useNavigate();
   
@@ -39,6 +44,7 @@ const Redirect = (target: string) => {
           return navigate(target);
       }
     },[token, navigate, target]);
+    return <></>
   }
 
 export default Redirect

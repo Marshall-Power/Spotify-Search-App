@@ -8,6 +8,7 @@ import AlbumCard from "../components/AlbumCard"
 import StartTyping from "../components/startTyping"
 import useFetch from "../hooks/useFetch"
 import Nav from "../components/Nav"
+import Error from '../components/error'
 import Cookies from 'js-cookie'
 
 const Home = (): JSX.Element => {
@@ -39,7 +40,7 @@ const Home = (): JSX.Element => {
         <Footer/>
       </div>
   )}
-  return (<div>Ooops, something went wrong</div>)
+  return <Error errorMsg={'Oops, something went wrong'}/>
 }
 
 export default Home

@@ -14,7 +14,7 @@ const defParams: TokenData = {
   token_type:''
 }
 
-const Redirect = ({ target }: any) => {
+const Redirect = (target: string) => {
     
     let navigate = useNavigate();
   

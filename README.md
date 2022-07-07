@@ -12,6 +12,8 @@ I started the project locally and didn't use git for most of it, otherwise I wou
 
 The app is complete (there's always some refractoring to do, improvements to make, bugs to catch) but should work as expected.
 
+The app now has been fully converted to TypeScript!
+
 
 
 # Getting Started with Create React App

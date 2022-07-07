@@ -1,7 +1,7 @@
 import React from 'react';
 interface DataSlug {
     data: {
-        slug: string;
+        slug?: string;
     }
 }
 

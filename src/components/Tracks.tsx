@@ -1,11 +1,11 @@
 import React from 'react'
 import Track from "./Track"
 
-type TracksProps = SpotifyApi.TrackSearchResponse
+type tracksProps = SpotifyApi.TrackSearchResponse
 
 //Track parent component that renders a list of tracks
-const Tracks = (trackList: TracksProps): JSX.Element | null => {
-    if(trackList.tracks === undefined){
+const Tracks = (trackList: tracksProps): JSX.Element | null => {
+    if(trackList.tracks === undefined || trackList.tracks.items.length === 0){
         return null
     }
     

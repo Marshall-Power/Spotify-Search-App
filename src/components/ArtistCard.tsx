@@ -8,7 +8,7 @@ type ArtistsProps = SpotifyApi.ArtistSearchResponse
 //Artist parent component, renders the list of artists, gets the full artists object from spotify and renders if it's not undefined
 const Artists = (artistsList: ArtistsProps): JSX.Element | null => {
     
-    if(artistsList.artists === undefined){
+    if(artistsList.artists === undefined || artistsList.artists.items.length === 0){
         return null
     }
     

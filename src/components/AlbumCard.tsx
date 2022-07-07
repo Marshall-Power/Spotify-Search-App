@@ -8,7 +8,7 @@ type AlbumsProps = SpotifyApi.AlbumSearchResponse
 //Album parent component, renders the list of albums, gets the full albums object from spotify and renders if it's not undefined
  const Albums = (albumsList: AlbumsProps): JSX.Element | null => {
 
-    if(albumsList.albums === undefined){
+    if(albumsList.albums === undefined || albumsList.albums.items.length === 0){
         return null
     } 
 
